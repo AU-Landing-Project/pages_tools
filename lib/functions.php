@@ -28,7 +28,7 @@
 				
 				foreach($children as $child){
 					$order = $child->order;
-					if(empty($order)){
+					if($order === NULL){
 						$order = $child->time_created;
 					}
 					
@@ -119,6 +119,7 @@
 				elgg_register_menu_item("pages_nav", array(
 					"name" => "page_" . $root_page->getGUID(),
 					"text" => $root_page->title,
+					"title" => $child->title,
 					"href" => $root_page->getURL(),
 					"rel" => $root_page->getGUID(),
 					"item_class" => $class,
