@@ -21,7 +21,7 @@
 	
 	// display the form fields
 	foreach ($variables as $name => $type) {
-		
+		if ($name == 'parent_guid') { continue; } // hack to remove broken parent input until fixed by coldtrick
 		echo "<div>";
 		echo "<label>" . elgg_echo("pages:$name") . "</label>";
 		

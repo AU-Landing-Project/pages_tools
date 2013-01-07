@@ -119,7 +119,7 @@
 				elgg_register_menu_item("pages_nav", array(
 					"name" => "page_" . $root_page->getGUID(),
 					"text" => $root_page->title,
-					"title" => $child->title,
+					"title" => $root_page->title,
 					"href" => $root_page->getURL(),
 					"rel" => $root_page->getGUID(),
 					"item_class" => $class,
@@ -147,6 +147,7 @@
 					$params = array(
 						"name" => "page_" . $child->getGUID(),
 						"text" => $child->title,
+						"title" => $child->title,
 						"href" => $child->getURL(),
 						"rel" => $child->getGUID(),
 						"item_class" => $class,
